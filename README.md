@@ -4,8 +4,8 @@
 Hello World!
 
 ### W2
-1. r, g, and b combine together to determine which color something is. If r, g, and b were booleans, there would only be 2 options (t/f) for each. 
-That gives us only 2*2*2=8 possible colors, which is not ideal. If r, g, and b were ints, that would give us many more colors, but the palette could still 
+1. r, g, and b combine together to determine what color something is. If r, g, and b were booleans, there would only be 2 options (t/f) for each. 
+That gives us only 2*2*2=8 possible colors, which is quite limiting. If r, g, and b were ints, that would give us many more colors, but the palette could still 
 be expanded. Floats allow us to have a near infinite amount of possible colors to choose from, and colors can smoothly transition into others in tiny increments.
 
 2. _bounce tracks the number of times the ball has bounced. A bool (true/false) will only tell us if the ball has bounced, not how many times it has bounced.
