@@ -16,6 +16,13 @@ have bounced a whole number of times, and int allows _bounce to be any whole num
 this told me that r+=0.1 was broken due to 0.1 being a double. In order to add 0.1 to r, I needed to set 0.1 as a float first. 
 
 
+### W3
+Table #16
+
+As this method "doesn't need any output", it will be a void method with no return type.
+The method's input is the player's sanity level, a number between 0 to 100%. If this is represented
+as a whole number from 0-100, then the input type will be an integer. If, however, the sanity percentage
+is represented as a number from 0.00 to 1.00, then the input type will be a float. 
 
 ## Open-Source Assets
 ### W1
