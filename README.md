@@ -24,6 +24,12 @@ The method's input is the player's sanity level, a number between 0 to 100%. If 
 as a whole number from 0-100, then the input type will be an integer. If, however, the sanity percentage
 is represented as a number from 0.00 to 1.00, then the input type will be a float. 
 
+A class is the blueprint for the room in a house. A component is a fully-built and realized blueprint for that room. Member variables are the dimensions 
+and specifications of the room. Methods are the functionalities of the room (e.g., the door opens).
+
+I think the balls get extremely bright because the brightness increase per bounce is tied to the ball's velocity, which is exponential. With every bounce, each
+ball moves exponentially faster, causing their brightness levels to quickly reach extremes. 
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
