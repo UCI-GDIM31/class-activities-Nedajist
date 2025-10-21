@@ -30,6 +30,13 @@ and specifications of the room. Methods are the functionalities of the room (e.g
 I think the balls get extremely bright because the brightness increase per bounce is tied to the ball's velocity, which is exponential. With every bounce, each
 ball moves exponentially faster, causing their brightness levels to quickly reach extremes. 
 
+### W4
+Table #18
+
+Line 17 creates a new member boolean variable (true/false) named _isGrounded. It is private, so it cannot be modified outside of its parent, the CatW4 class. This tracks if the player is on the ground.
+Line 28 checks if the player has just pressed space and if they are also on the ground. Presumably this checks the conditions for a jump (the player has to be on the ground and pressing space)
+Line 32 is within the if statement on line 28, and it sets _isGrounded to false. So when the player is jumping, they are counted as no longer on the ground.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
