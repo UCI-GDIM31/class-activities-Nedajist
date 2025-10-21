@@ -37,6 +37,10 @@ Line 17 creates a new member boolean variable (true/false) named _isGrounded. It
 Line 28 checks if the player has just pressed space and if they are also on the ground. Presumably this checks the conditions for a jump (the player has to be on the ground and pressing space)
 Line 32 is within the if statement on line 28, and it sets _isGrounded to false. So when the player is jumping, they are counted as no longer on the ground.
 
+I added Rigidbodies to the cat and the ball, since they physically collide with each other. Nothing collides with the goal, so I didn't add a Rigidbody to it.
+I added is trigger to the goal, as it is supposed to detect collisions but not physically move/interact with colliders.
+The game worked the first time I tested it.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
