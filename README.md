@@ -42,12 +42,14 @@ I added is trigger to the goal, as it is supposed to detect collisions but not p
 The game worked the first time I tested it.
 
 ### W5
+Q: What is the difference between transform and Vector3?
+A: A transform component contains several Vector3 variables. A Vector3 variable can never be a component.
 
 The Deer W5 Class:
 1. It needs a transform member variable and a NavMeshAgent variable.
-2. The methods required are Update and Start.
-3. The start method will set the NavMeshAgent variable and receive the transform variable of the Deer's destination.
-   The update method will move the deer.
+2. The method required is Start.
+3. The start method will set the NavMeshAgent variable and find the position of the transform variable.
+   Then, the start method will call the NavMeshAgent's move method, prompting the deer to move.
 
 
 ## Open-Source Assets
