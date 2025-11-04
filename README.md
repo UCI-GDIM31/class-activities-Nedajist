@@ -51,6 +51,20 @@ The Deer W5 Class:
 3. The start method will set the NavMeshAgent variable and find the position of the transform variable.
    Then, the start method will call the NavMeshAgent's move method, prompting the deer to move.
 
+### W6
+
+Document Link: [Here](https://docs.google.com/document/d/1_Zwo3XH1VQM32Ym-pGFQQy0nj1sO6sBX9mo0lAvqYQw/edit?tab=t.0)
+Category: Unity Coding
+
+Plans for BatW6 class:
+It will have 3 member variables: speed, an integer which determines how fast the bat moves. chasing_player, a boolean that determines 
+if the bat will chase the player, and target_player, which is a gameobject that references to the player character.
+
+I plan to make 2 custom methods, chase_player() and stop_chasing_player() which set chasing_player to true and false.
+The bat will probably move in Update(), which I plan to retrieve the vector from the bat to the player, 
+normalize it, and multiply it by Time.delta.time. Then I would transform the player's position by that new vector. 
+
+Start() is only necessary for part 1, which will call chase_player(). 
 
 ## Open-Source Assets
 ### W1
