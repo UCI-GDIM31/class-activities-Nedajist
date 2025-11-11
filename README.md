@@ -71,9 +71,8 @@ Start() is only necessary for part 1, which will call chase_player().
 Document Link: [Here](https://docs.google.com/document/d/1nSQTsrKYDlO6F7FmIx6hmC3CpusIQNMKURDBw7u9siU/edit?tab=t.0)
 Category: Environment
 
-Despite the muskrat going to its intended position in step 2, the code is incorrect because directly changing the muskrat's position does not change
-its velocity. When using the muskrat's linear velocity to detect if it is running, the program will always detect the muskrat's forward velocity 
-as 0, thus it never plays the running animation. 
+After rotating the muskrat, the code in step 2 will cause it to move forward/backward in a direction misaligned to the direction that the muskrat is facing.
+Simply changing the muskrat's position does not account for the direction that the Muskrat is facing in. 
 
 ## Open-Source Assets
 ### W1
