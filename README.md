@@ -66,6 +66,15 @@ normalize it, and multiply it by Time.delta.time. Then I would transform the pla
 
 Start() is only necessary for part 1, which will call chase_player(). 
 
+### W7
+
+Document Link: [Here](https://docs.google.com/document/d/1nSQTsrKYDlO6F7FmIx6hmC3CpusIQNMKURDBw7u9siU/edit?tab=t.0)
+Category: Environment
+
+Despite the muskrat going to its intended position in step 2, the code is incorrect because directly changing the muskrat's position does not change
+its velocity. When using the muskrat's linear velocity to detect if it is running, the program will always detect the muskrat's forward velocity 
+as 0, thus it never plays the running animation. 
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

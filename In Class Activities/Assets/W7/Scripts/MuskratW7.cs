@@ -46,8 +46,8 @@ public class MuskratW7 : MonoBehaviour
         // You might want to look below Step 3 for an example :D
         
         float leftright = Input.GetAxis("Horizontal");
-        
-
+        Vector3 axis0 = transform.TransformDirection(Vector3.up);
+        transform.RotateAround(_sphereTransform.position, axis0, leftright*Time.deltaTime*_rotationSpeed);
 
         // STEP 3 -------------------------------------------------------------
 
@@ -65,6 +65,15 @@ public class MuskratW7 : MonoBehaviour
         //      the Muskrat.
         // The Muskrat should never play the "flying" animation while on a
         //      bubble.
+        if (Mathf.Abs(leftright) > 0 || Mathf.Abs(forward)>0)
+        {
+            _animator.SetBool("running", true);
+        }
+        else
+        {
+            _animator.SetBool("running", false);
+        }
+
 
 
         // STEP 5 -------------------------------------------------------------
@@ -86,7 +95,7 @@ public class MuskratW7 : MonoBehaviour
         //      like up, left, right, or forward.
 
         float leftright = Input.GetAxis("Horizontal");
-
+        transform.Rotate(leftright * Vector3.up * Time.deltaTime * _rotationSpeed);
         // STEP 1 -------------------------------------------------------------
 
 
@@ -96,10 +105,11 @@ public class MuskratW7 : MonoBehaviour
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
-
+        Vector3 moveVector = movement * Vector3.forward * _moveSpeed * Time.deltaTime;
+        //transform.Translate(moveVector);
         // STEP 2 -------------------------------------------------------------
-
+        transform.Translate(moveVector);
+        print(_rigidbody.linearVelocity);
 
         // STEP 4 -------------------------------------------------------------
         // Change the "flying" and "running" parameters on the Animator based
@@ -107,8 +117,24 @@ public class MuskratW7 : MonoBehaviour
         // Use _rigidbody.linearVelocity.
         // You may also find the absolute value method, Mathf.Abs(), helpful:
         //      https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Mathf.Abs.html
+        if (Mathf.Abs(movement) > 0 || Mathf.Abs(leftright)>0)
+        {
+            _animator.SetBool("running", true);
+        }
+        else
+        {
+            _animator.SetBool("running", false);
+        }
 
-        
+        if (Mathf.Abs(_rigidbody.linearVelocity.y) > 0.05)
+        {
+            _animator.SetBool("flying", true);
+        }
+        else
+        {
+            _animator.SetBool("flying", false);
+
+        }
         // STEP 4 -------------------------------------------------------------
     }
 
@@ -136,6 +162,7 @@ public class MuskratW7 : MonoBehaviour
         if (collision.gameObject.tag.Equals("Ball"))
         {
             _orbitMode = true;
+            _animator.SetBool("flying", false);
             _rigidbody.isKinematic = true;
 
             _sphereTransform = collision.transform;
