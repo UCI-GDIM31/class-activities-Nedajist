@@ -72,7 +72,9 @@ Document Link: [Here](https://docs.google.com/document/d/1nSQTsrKYDlO6F7FmIx6hmC
 Category: Environment
 
 After rotating the muskrat, the code in step 2 will cause it to move forward/backward in a direction misaligned to the direction that the muskrat is facing.
-Simply changing the muskrat's position does not account for the direction that the Muskrat is facing in. 
+Simply changing the muskrat's position does not account for the direction that the Muskrat is facing in. It simply moves its global position forward, but the 
+Muskrat's local position (which accounts for rotation) is what ought to move forward. 
+The solution is to use the Translate method, which does account for the Muskrat's facing direction. 
 
 ## Open-Source Assets
 ### W1
